@@ -1,12 +1,13 @@
 {
+  //Obeject Destructuring
   let user = {
     id: 345,
     name: {
-      firstName: "Mezbaul",
-      middleName: "Abedin",
-      lastName: "Persian",
+      firstName: "Samiul",
+      middleName: "Ahmed",
+      lastName: "Anik",
     },
-    contactNo: "0170000000",
+    contactNo: "Bangladesh",
     address: "Uganda",
   };
 
@@ -14,5 +15,10 @@
     address,
     name: { firstName },
   } = user;
-  console.log(address, firstName);
+
+  //Array destructuring
+  const myFriends = ["chandler", "joey", "ross", "rachel", "monica", "phoebe"];
+  //,, get first two items and others are in ...rest
+
+  const [, , bestfriend, ...rest] = myFriends;
 }
