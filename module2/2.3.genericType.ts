@@ -12,6 +12,28 @@
   // const boolArray: boolean[] = [true, false, true];
   const boolArray: GenericArray<boolean> = [true, false, true];
 
+  type ThingsArray<T> = Array<T>;
+
+  const frinds: ThingsArray<string> = ["Rahim", "Karim", "Abdul"];
+
+  const studentsRollNumbers: ThingsArray<number> = [3, 6, 8];
+
+  interface Employee {
+    name: string;
+    age: number;
+  }
+
+  const employees: ThingsArray<Employee> = [
+    {
+      name: "Samiul",
+      age: 100,
+    },
+    {
+      name: "Anik",
+      age: 110,
+    },
+  ];
+
   interface User {
     name: string;
     age: number;

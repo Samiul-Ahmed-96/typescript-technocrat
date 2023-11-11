@@ -11,12 +11,34 @@
     age: number;
   }
 
+  // Added user 1 with new property in type
   type UserWithRole1 = User1 & { role: string };
 
   interface UserWithRole2 extends User1 {
     role: string;
   }
+  //Example
+  type Person1 = {
+    name: string;
+    age: number;
+    isMarried: boolean;
+  };
 
+  interface Person2 {
+    name: string;
+    age: number;
+    isMarried: boolean;
+  }
+
+  type PersonWithDesignation = Person1 & {
+    designation: string;
+  };
+
+  interface PersonWithPhone extends Person2 {
+    phoneNumber: number;
+  }
+
+  //
   const user1: UserWithRole2 = {
     name: "sakib",
     age: 100,

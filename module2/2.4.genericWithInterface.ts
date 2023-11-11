@@ -63,5 +63,65 @@
     },
   };
 
+  //Practice
+  //Default value null
+  interface Player<T, X = null> {
+    name: string;
+    laptop: {
+      brand: string;
+      model: string;
+    };
+    smartWatch: T;
+    //Optional
+    car?: X;
+  }
+
+  interface ImilabWatch {
+    brand: string;
+    model: string;
+  }
+
+  const poorPlayer: Player<ImilabWatch> = {
+    name: "Anik",
+    laptop: {
+      brand: "Asus",
+      model: "X909",
+    },
+    smartWatch: {
+      brand: "imilab",
+      model: "r7",
+    },
+  };
+
+  interface AppleWatch2 {
+    brand: string;
+    model: string;
+    heartMonitor: number;
+    stopWatch: string;
+  }
+
+  interface Bmw {
+    model: string;
+    brand: string;
+  }
+
+  const richPlayer: Player<AppleWatch2, Bmw> = {
+    name: "Ahmed",
+    laptop: {
+      brand: "Asus",
+      model: "X909",
+    },
+    smartWatch: {
+      brand: "imilab",
+      model: "r7",
+      heartMonitor: 232,
+      stopWatch: "yes",
+    },
+    car: {
+      model: "x7",
+      brand: "Bmw",
+    },
+  };
+
   //
 }
