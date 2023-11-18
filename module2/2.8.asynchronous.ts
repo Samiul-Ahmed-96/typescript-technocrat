@@ -20,9 +20,18 @@
 
   getTodo();
 
+  //Another todo
+  const getTodo2 = async (): Promise<Todo> => {
+    const response = await fetch(
+      "https://jsonplaceholder.typicode.com/todos/2"
+    );
+    const data = await response.json();
+    return data;
+  };
+
   type Something = { something: string };
 
-  // simulate
+  // simulate create promise
   const createPromise = (): Promise<Something> => {
     return new Promise<Something>((resolve, reject) => {
       const data: Something = { something: "something" };
